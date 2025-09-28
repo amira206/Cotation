@@ -585,6 +585,7 @@ class StockDataConverter:
 
             # Drop the parsing column
             df = df.drop('SEANCE_PARSED', axis=1)
+            df = df.fillna(0.0)
 
             logger.info(f"Data sorted successfully. Total rows preserved: {len(df)}")
 
